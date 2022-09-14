@@ -12,6 +12,28 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from Monte_Carlo_Simulation import MC_coor
 
+### Default values ###
+kb = 1.98*(10**(-3))          # Boltzmann constant in kcal/mol.K
+eps = 3                       # units in kcal/mol
+sigma = 2                     # units in angstrom (for LJ potential)
+T = 300                       # units in kelvin
+N = 50                        # number of points within the box
+Nstep = 100                   # number of steps
+minx   =  -10                 # Minimum of x
+maxx   =  10                  # Maximum of x
+rangex = maxx - minx          # Boxsize on x dimension
+miny = -10
+maxy = 10
+rangey = maxy - miny
+minz = 0
+maxz = 0
+rangez = maxz - minz         # z-dimension is listed here, but I make the range of z as 0, so that it is still a two-dimention system
+dx = 2
+dy = 2
+dz = 0 
+cutoff = 9                   # cutoff < boxsize/2
+
+
 ### Test1: Intuitively test the MC simulation (N=50,Nstep=1000,Nmove=1,T=300K,dx=dy=2)
 Nstep = 1000
 Nmove = 1            # do MC move for only one point in each step
